@@ -29,12 +29,13 @@ public class ProductController {
   @Operation(summary = "Create a new product", description = "Add a new product to the system")
   @PostMapping
   @ApiResponses(value = {
-      @ApiResponse(responseCode = "200", description = "Product created successfully",
+      @ApiResponse(responseCode = "201", description = "Product created successfully",
           content = @Content(schema = @Schema(implementation = ProductResponse.class))),
       @ApiResponse(responseCode = "400", description = "Invalid request data",
           content = @Content(schema = @Schema()))})
   public ResponseEntity<ProductResponse> createProduct(@RequestBody ProductRequest productRequest) {
-    return ResponseEntity.ok(productService.createProduct(productRequest));
+    return new ResponseEntity<>(productService.createProduct(productRequest),
+        org.springframework.http.HttpStatus.CREATED);
   }
 
   @Operation(summary = "Get all products", description = "Retrieve a list of all products")
