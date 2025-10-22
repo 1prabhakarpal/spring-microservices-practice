@@ -1,0 +1,75 @@
+# -------------------------------
+# Java / Spring Boot .gitignore
+# -------------------------------
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+.gradle/
+out/
+
+# Spring Boot
+*.log
+*.jar
+*.war
+*.iml
+*.class
+
+# Environment / Config
+.env
+application-*.yml
+application-*.yaml
+application-*.properties
+# Keep base config if needed
+!application.properties
+!application.yml
+
+# Logs
+logs/
+*.log
+*.out
+
+# IDEs and editors
+## IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+## Eclipse
+.project
+.metadata/
+.classpath
+.caches/
+.settings/
+bin/
+tmp/
+
+## VS Code
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Testing
+test-output/
+surefire-reports/
+jacoco.exec
+
+# Backup / temp files
+*.swp
+*.swo
+*.bak
+*.tmp
+~$*
