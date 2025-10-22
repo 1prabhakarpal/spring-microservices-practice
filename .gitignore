@@ -73,3 +73,8 @@ jacoco.exec
 *.bak
 *.tmp
 ~$*
+
+*/data/*
+*.log
+mongodb-data/
+data/
